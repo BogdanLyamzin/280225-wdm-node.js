@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="click-button">Click me</button>
+    <script>
+      // useEffect(()=> {
+      //   const overlayClick = ()=> {
+
+      //   }
+      //   document.addEventListener("click", overlayClick);
+      //   return ()=> document.removeEventListener("click", overlayClick)
+      // }, []);
+
+      const button = document.getElementById("click-button");
+
+      const clickHandles = {
+        1: ()=> {
+          console.log("click 1");
+        },
+        2: ()=> {
+          console.log("click 2");
+        },
+        3: ()=> {
+          console.log("click 3");
+        },
+      };
+
+      let clickCounter = 1;
+
+      button.addEventListener("click", ()=> {
+        clickHandles[clickCounter]();
+        clickCounter +=1;
+      })
+
+      // const clickHandler2 = ()=> {
+      //   console.log("click 2")
+      // }
+
+      // const clickHandle1 = () => {
+      //   console.log("click 1");
+      //   button.removeEventListener("click", clickHandle1);
+      //   button.addEventListener("click", clickHandler2)
+      // };
+
+      // button.addEventListener("click", clickHandle1);
+
+    </script>
+  </body>
+</html>
