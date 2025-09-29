@@ -1,4 +1,5 @@
 import {createServer} from "node:http";
+import "dotenv/config";
 
 import { getCurrentWeather } from "./weather-api.js";
 
@@ -27,6 +28,8 @@ const server = createServer(async (request, response)=> {
 
     }
     return response.end("<h2>Page not found</h2>");
-})
+});
 
-server.listen(3000, ()=> console.log("Server running on 3000 port"));
+const port = Number(process.env.PORT) || 3000;
+
+server.listen(port, ()=> console.log(`Server running on ${port} port`));
