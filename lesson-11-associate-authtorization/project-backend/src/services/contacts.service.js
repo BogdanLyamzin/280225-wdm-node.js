@@ -15,7 +15,7 @@ export const getContactById = id => Contact.findByPk(id);
 //     }
 // });
 
-export const addContact = payload => Contact.create(payload); // throw new Error("notNull Violation: contact.email cannot be null")
+export const addContact = payload => Contact.create(payload); // throw new ValidationError("notNull Violation: contact.email cannot be null")
 
 export const updateContactById = async (id, payload)=> {
     const contact = await getContactById(id);

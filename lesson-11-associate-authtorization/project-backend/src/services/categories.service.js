@@ -10,4 +10,6 @@ export const getCategoriesWithDetails = ()=> Category.findAll({
     }
 })
 
-export const addCategory = payload => Category.create(payload);
+export const addCategory = payload => {
+   return Category.create(payload);
+}; // throw new Error("")

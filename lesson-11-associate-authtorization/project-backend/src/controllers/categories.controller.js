@@ -16,6 +16,6 @@ export const getCategoriesWithDetailsController = async(req, res)=> {
 
 export const addCategoryController = async(req, res)=> {
     validateBody(categoryFullSchema, req.body);
-    const result = await addCategory(req.body);
+    const result = await addCategory(req.body); // throw new Error()
     res.status(201).json(result);
 }
