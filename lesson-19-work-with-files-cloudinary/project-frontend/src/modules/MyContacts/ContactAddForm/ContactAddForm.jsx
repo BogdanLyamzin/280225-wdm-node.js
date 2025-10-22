@@ -62,10 +62,10 @@ const ContactAddForm = ({ submitForm, loading }) => {
           labelId="demo-simple-select-label"
           id="demo-simple-select"
           label="Category"
-          value={1}
+          value="68f5f8d2b84bca733ebbd530"
           {...register("category")}
         >
-          <MenuItem value={1}>Work</MenuItem>
+          <MenuItem value="68f5f8d2b84bca733ebbd530">Work</MenuItem>
         </Select>
         <div>
           <label htmlFor="photo">Photo</label>

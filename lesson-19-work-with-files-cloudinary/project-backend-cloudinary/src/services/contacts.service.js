@@ -3,6 +3,8 @@ import path from "node:path";
 
 import Contact from "../db/models/Contact.js";
 
+import cloudinary from "../utils/cloudinary.js";
+
 export const getContacts = (query) =>
   Contact.find(query)
     .populate("category", "-createdAt -updatedAt")
@@ -11,9 +13,15 @@ export const getContacts = (query) =>
 export const getContactById = (id) => Contact.findById(id);
 
 export const addContact = async (payload, file) => {
-  const newPath = path.resolve("public", "contacts", file.filename);
-  await fs.rename(file.path, newPath);
-  const photo = file ? path.join("contacts", file.filename) : "";
+  let photo = "";
+  if(file) {
+    const {url} = await cloudinary.uploader.upload(file.path, {
+      folder: "contacts",
+      use_filename: true,
+    });
+    photo = url;
+    await fs.unlink(file.path);
+  }
   return Contact.create({...payload, photo});
 };
 
