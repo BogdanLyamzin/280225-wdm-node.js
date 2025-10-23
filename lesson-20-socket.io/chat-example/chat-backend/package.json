@@ -1,0 +1,30 @@
+{
+  "name": "project-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index",
+    "dev": "nodemon src/index",
+    "lint": "eslint src/**/*.js",
+    "lint:fix": "eslint src/**/*.js --fix",
+    "format": "prettier --write src/**/*.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@eslint/js": "^9.36.0",
+    "@eslint/json": "^0.13.2",
+    "eslint": "^9.36.0",
+    "globals": "^16.4.0",
+    "nodemon": "^3.1.10",
+    "prettier": "^3.6.2"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "socket.io": "^4.8.1"
+  }
+}

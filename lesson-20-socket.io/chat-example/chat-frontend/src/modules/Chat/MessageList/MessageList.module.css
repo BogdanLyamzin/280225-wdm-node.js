@@ -1,0 +1,14 @@
+.wrapper {
+    padding: 10px 15px;
+    border: 1px solid;
+    max-width: 500px;
+    margin: 25px 0;
+}
+
+.myMessage {
+    text-align: left;
+}
+
+.otherMessage { 
+    text-align: right;
+}
