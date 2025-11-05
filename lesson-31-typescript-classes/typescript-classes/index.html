@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Product {
+        constructor(name, description, price) {
+          this.name = name;
+          this.description = description;
+          this.price = price;
+        }
+
+        calcDelivery(distance) {
+          return distance * 0.1;
+        }
+      }
+
+      const product1 = new Product("Lenovo X120S", "Тонкий и легкий ноутбук", 1200);
+      console.log(product1);
+      const product2 = new Product("iPhone 17 Air", "Самый тонкий телефон в мире", 1300);
+      console.log(product2.calcDelivery(50));
+      
+    </script>
+  </body>
+</html>
