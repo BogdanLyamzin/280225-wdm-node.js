@@ -8,5 +8,6 @@
 // import "./embeded-objects-readonly.ts";
 // import "./interface-advanced.ts";
 // import "./generic.ts";
-import "./classes.ts";
+// import "./classes.ts";
 // import "./class-exercises.ts";
+import "./abstract-classes.ts";
