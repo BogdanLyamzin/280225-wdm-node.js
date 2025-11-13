@@ -1,0 +1,1 @@
+{"version":3,"file":"notFoundHandler.d.ts","sourceRoot":"","sources":["../../src/middlewares/notFoundHandler.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,EAAE,QAAQ,EAAE,MAAM,SAAS,CAAC;AAE5C,QAAA,MAAM,eAAe,GAAI,KAAK,OAAO,EAAE,KAAK,QAAQ,SAInD,CAAC;AAEF,eAAe,eAAe,CAAC"}
